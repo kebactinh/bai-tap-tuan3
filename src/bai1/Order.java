@@ -2,7 +2,7 @@ package bai1;
 
 public class Order {
 	private final double DEFAULT_PRICE = 0;
-	private final double DISCOUNT = 0.9;
+	private final double DISCOUNT = 0.1;
 	private final double MAX_PRICE = 100;
 
 	public double calculateTotalPrice() {
@@ -17,11 +17,11 @@ public class Order {
 	}
 
 	/**
-	 * get total price before discount
+	 * calculate total price before discount
 	 * 
 	 * @return total price
 	 */
-	private double getTotalPriceBeforeDiscount() {
+	private double calculateTotalPriceBeforeDiscount() {
 		double totalPrice = DEFAULT_PRICE;
 		for (Item item : items) {
 			totalPrice += item.getPrice() * item.getQuantity();
@@ -29,7 +29,7 @@ public class Order {
 		return totalPrice;
 	}
 
-	private double getPriceDiscount() {
-
+	private double calculatePriceDiscount() {
+		
 	}
 }
