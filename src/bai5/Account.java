@@ -1,14 +1,23 @@
 package bai5;
 
 public class Account {
-	private String type;
+	private AccountType accountType;
 
-	// ...
+	/**
+	 * constructor
+	 * 
+	 * @param accountType the account type
+	 */
+	public Account(AccountType accountType) {
+		this.accountType = accountType;
+	}
+
+	/**
+	 * calculate interest
+	 * 
+	 * @return the interest
+	 */
 	public double calculateInterest() {
-		if (type.equals("saving")) {
-			// Tính lãi suất tiết kiệm
-		} else {
-			// Tính lãi suất vay
-		}
+		return accountType.calculateInterest(this);
 	}
 }
