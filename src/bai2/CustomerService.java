@@ -9,7 +9,7 @@ public class CustomerService {
 	 * check is vip customer
 	 * 
 	 * @param customer the customer
-	 * @return true if is total price more
+	 * @return true if is total price more vip threshold
 	 */
 	public boolean isVipCustomer(Customer customer) {
 		return calculateTotalPrice(customer) > VIP_THRESHOLD;
