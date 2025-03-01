@@ -8,11 +8,12 @@ public class Customer {
 	private String name;
 	private Address address;
 	private List<Order> orders;
+	private CustomerService customerService;
 
 	/**
 	 * @return true if is vip customer
 	 */
 	public boolean isVipCustomer() {
-		return new CustomerService().isVipCustomer(this);
+		return customerService.isVipCustomer(this);
 	}
 }
